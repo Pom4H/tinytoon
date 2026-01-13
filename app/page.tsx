@@ -1,65 +1,99 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+      <header className="border-b border-gray-200 dark:border-gray-800">
+        <div className="container mx-auto flex items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-3">
+            <div className="rounded-md bg-blue-600 text-white font-bold px-3 py-1">W</div>
+            <div className="text-lg font-semibold">Worken — Inspired</div>
+          </div>
+          <nav className="hidden md:flex items-center gap-6 text-sm text-gray-600 dark:text-gray-300">
+            <a href="#services" className="hover:underline">Услуги</a>
+            <a href="#cases" className="hover:underline">Кейсы</a>
+            <a href="#about" className="hover:underline">О нас</a>
+            <a href="#contacts" className="px-4 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900">Связаться</a>
+          </nav>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+      </header>
+
+      <main className="container mx-auto px-6 py-16">
+        <section className="grid gap-8 md:grid-cols-2 items-center">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">Дизайн и разработка продуктов, которые продают</h1>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-xl">Быстрый старт: простая команда, проверенный процесс и фокус на результате. Мы создаём интерфейсы, которые действительно работают для бизнеса.</p>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <a className="inline-block rounded-md bg-blue-600 text-white px-5 py-3 font-medium hover:bg-blue-700" href="#contacts">Получить консультацию</a>
+              <a className="inline-block rounded-md border border-gray-200 px-5 py-3 text-gray-700 hover:bg-gray-50 dark:border-gray-800" href="#cases">Наши кейсы</a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div className="text-sm text-gray-500">UX/UI</div>
+              <div className="text-sm text-gray-500">Web & Mobile</div>
+              <div className="text-sm text-gray-500">Branding</div>
+              <div className="text-sm text-gray-500">Support</div>
+            </div>
+          </div>
+
+          <div className="rounded-lg bg-gray-50 dark:bg-gray-800 p-6 flex items-center justify-center">
+            <div className="w-full h-56 bg-gradient-to-br from-blue-200 to-blue-400 rounded-md flex items-center justify-center text-blue-900 font-bold">Hero Image</div>
+          </div>
+        </section>
+
+        <section id="services" className="mt-16">
+          <h2 className="text-2xl font-semibold">Услуги</h2>
+          <p className="mt-2 text-gray-600 dark:text-gray-300 max-w-2xl">Коротко о том, что мы делаем для клиентов.</p>
+
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: 'Исследования и прототипы', desc: 'Понимаем пользователей и быстро проверяем гипотезы.' },
+              { title: 'Дизайн интерфейсов', desc: 'Простые и продающие интерфейсы для web и mobile.' },
+              { title: 'Разработка', desc: 'Современные решения на React/Next.js и других стэках.' },
+              { title: 'Тестирование и поддержка', desc: 'Поддерживаем продукт и улучшаем метрики.' },
+              { title: 'Бренд и айдентика', desc: 'Создаём визуальную систему и голос бренда.' },
+              { title: 'Аналитика', desc: 'Настраиваем аналитику и помогаем принимать решения.' },
+            ].map((s) => (
+              <div key={s.title} className="rounded-lg border border-gray-100 dark:border-gray-800 p-6 bg-white dark:bg-gray-900">
+                <h3 className="text-lg font-semibold">{s.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="cases" className="mt-16">
+          <h2 className="text-2xl font-semibold">Кейсы</h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            <div className="rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800">
+              <div className="h-40 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500">Case image</div>
+              <div className="p-4">
+                <h3 className="font-semibold">Проект А</h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Короткое описание результата и метрик.</p>
+              </div>
+            </div>
+            <div className="rounded-lg overflow-hidden border border-gray-100 dark:border-gray-800">
+              <div className="h-40 bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500">Case image</div>
+              <div className="p-4">
+                <h3 className="font-semibold">Проект Б</h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Короткое описание результата и метрик.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contacts" className="mt-16 mb-24">
+          <h2 className="text-2xl font-semibold">Контакты</h2>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">Напишите нам, и мы обсудим ваш проект.</p>
+          <div className="mt-4">
+            <a href="mailto:hello@example.com" className="inline-block rounded-md bg-blue-600 text-white px-5 py-3">hello@example.com</a>
+          </div>
+        </section>
       </main>
+
+      <footer className="border-t border-gray-200 dark:border-gray-800">
+        <div className="container mx-auto px-6 py-6 text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} Worken — Inspired. Все права защищены.</div>
+      </footer>
     </div>
   );
 }
+
