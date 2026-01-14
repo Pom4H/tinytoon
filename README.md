@@ -2,3 +2,5 @@
 
 Simple starter project.
 Used as a minimal hello world example.
+
+✅ Updated for test purposes.
