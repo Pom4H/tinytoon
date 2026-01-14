@@ -1,4 +1,4 @@
 # Hello World
 
-Простой стартовый проект.
-Используется как минимальный пример (hello world).
+Simple starter project.
+Used as a minimal hello world example.
