@@ -1,5 +1,5 @@
 import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
+import FooterComponent from './components/layout/FooterComponent'
 import HeroSection from './components/sections/HeroSection'
 import ServicesSection from './components/sections/ServicesSection'
 import CasesSection from './components/sections/CasesSection'
@@ -15,8 +15,7 @@ export default function Home() {
         <CasesSection />
         <ContactSection />
       </main>
-      <Footer />
+      <FooterComponent />
     </>
   )
 }
-
