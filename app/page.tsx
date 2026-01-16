@@ -14,6 +14,10 @@ export default function Home() {
         <ServicesSection />
         <CasesSection />
         <ContactSection />
+        <section style={{ padding: '20px' }}>
+          <h2 style={{ fontSize: '2em', color: '#333' }}>Тестовый текст на странице</h2>
+          <p>Это дополнительный текст, который я добавил для тестирования.</p>
+        </section>
       </main>
       <FooterComponent />
     </>
