@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hello World — Next + Bun",
-  description: "Минималистичное приложение "Hello World" на Next.js и Bun",
+  description: 'Минималистичное приложение "Hello World" на Next.js и Bun',
 };
 
 export default function RootLayout({
