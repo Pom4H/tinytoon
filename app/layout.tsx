@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hello World — Next + Bun",
-  description: 'Минималистичное приложение "Hello World" на Next.js и Bun',
+  title: "ЖК Солнечный — Комфортные квартиры в городе",
+  description: 'Современный жилой комплекс "ЖК Солнечный" — уютные квартиры, развитая инфраструктура и удобная транспортная доступность.',
 };
 
 export default function RootLayout({
@@ -23,10 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="ru">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
