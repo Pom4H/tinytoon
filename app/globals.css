@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Refined, muted palette suitable for real estate landing */
+/* Calm, professional palette for real estate landing */
 :root {
-  --background: #f5f7fa; /* very light cool gray */
-  --surface: #eef3f8; /* subtle surface */
-  --card-bg: #ffffff; /* cards */
-  --foreground: #0b1a27; /* almost-black navy */
+  --background: #f7fafc; /* very light neutral */
+  --surface: #f1f5f9; /* soft surface */
+  --card-bg: #ffffff; /* card background */
+  --foreground: #0f1724; /* dark slate */
 
-  --primary: #0f4c81; /* deep desaturated blue */
-  --primary-hover: #145e9e;
+  --primary: #165a7e; /* deep teal-blue */
+  --primary-hover: #1e6f98; /* hover */
 
-  --accent: #c17a45; /* warm bronze accent */
-  --muted: #58616a; /* neutral muted gray */
+  --accent: #c57b3a; /* muted terracotta accent */
+  --muted: #64748b; /* slate gray */
 
-  --radius-lg: 1rem;
+  --radius-lg: 0.75rem;
 }
 
 @theme inline {
@@ -30,7 +30,7 @@
     --card-bg: #071726;
     --foreground: #e6eef6;
 
-    --primary: #4aa3db; /* soft cyan-blue */
+    --primary: #4aa3db; /* soft cyan-blue for dark */
     --primary-hover: #66b8f0;
 
     --accent: #e0a66a;
@@ -44,13 +44,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Design tokens exposed as small utility classes */
+/* Design tokens as utility classes */
 .text-primary { color: var(--primary); }
 .text-muted { color: var(--muted); }
 .bg-primary { background-color: var(--primary); }
 .bg-surface { background-color: var(--surface); }
 .bg-card { background-color: var(--card-bg); }
-.border-muted { border-color: rgba(11,26,39,0.06); }
+.border-muted { border-color: rgba(15,23,36,0.06); }
 
 .btn-primary {
   background-color: var(--primary);
@@ -66,25 +66,23 @@ body {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid rgba(15,76,129,0.12);
+  border: 1px solid rgba(22,90,126,0.12);
   color: var(--primary);
   padding: 0.55rem 1.1rem;
   border-radius: var(--radius-lg);
 }
 
-.accent-flag {
-  color: var(--accent);
-}
+.accent { color: var(--accent); }
 
 .accent-gradient {
-  background: linear-gradient(90deg, rgba(15,76,129,0.04) 0%, rgba(193,122,69,0.06) 50%, rgba(193,122,69,0.04) 100%);
+  background: linear-gradient(90deg, rgba(22,90,126,0.04) 0%, rgba(197,123,58,0.06) 50%, rgba(197,123,58,0.04) 100%);
 }
 
-.card-shadow { box-shadow: 0 10px 30px rgba(11,26,39,0.06); }
+.card-shadow { box-shadow: 0 10px 30px rgba(15,23,36,0.06); }
 
 .input {
   background: var(--card-bg);
-  border: 1px solid rgba(11,26,39,0.06);
+  border: 1px solid rgba(15,23,36,0.06);
   color: var(--foreground);
   padding: 0.6rem;
   border-radius: 0.5rem;
