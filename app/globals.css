@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf0; /* warm light */
+  --foreground: #0f172a; /* slate-900 */
+  --primary: #059669; /* emerald-600 */
+  --primary-600: #059669;
+  --primary-500: #10b981;
+  --accent: #f59e0b; /* amber-500 */
 }
 
 @theme inline {
@@ -14,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #071024; /* dark navy */
+    --foreground: #e6eef6; /* light */
   }
 }
 
@@ -24,3 +28,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Small utilities for colors via CSS variables (used by some elements) */
+.btn-primary {
+  background-color: var(--primary-600);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--primary-500);
+}
+
+.bg-accent-gradient {
+  background: linear-gradient(90deg, rgba(16,185,129,0.15) 0%, rgba(245,158,11,0.15) 50%, rgba(254,202,21,0.12) 100%);
+}
+
